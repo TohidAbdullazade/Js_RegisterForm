@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+.full-section {
+  display: flex;
+
+  .left {
+    width: 50%;
+  }
+  .right {
+    width: 50%;
+  }
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fbf1f1;
+  width: 100%;
+  height: 100%;
+
+  .top-side {
+    display: flex;
+    justify-content: end;
+    width: 75%;
+    position: absolute;
+    top: 10px;
+
+    .links {
+      display: flex;
+      gap: 0.625rem;
+      cursor: pointer;
+
+      a {
+        width: 6.875rem;
+        height: 2.5rem;
+        border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+
+        border-radius: 0.625rem;
+        background-color: white;
+        padding: 0.625rem 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .bottom-side {
+    margin-top: 1.25rem;
+    .form-container {
+      box-shadow: 0 0 5px 2px lightgray;
+
+      max-width: 34.375rem;
+      margin: 0 auto;
+      width: 100%;
+      border: 1px solid lightgray;
+      border-radius: 0.625rem;
+      height: 41.25rem;
+      .inner-form-container {
+        padding: 3.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 0.9375rem;
+          width: 100%;
+
+          .input-container {
+            display: flex;
+            position: relative;
+
+            .password-input {
+              width: 26.8125rem;
+              height: 3.375rem;
+            }
+            .fa-eye {
+              position: absolute;
+              right: 10px;
+              top: 20px;
+              cursor: pointer;
+            }
+            .none {
+              position: absolute !important;
+              right: 10px !important;
+              top: 20px !important;
+              cursor: pointer !important;
+            }
+          }
+          input:not(.checkbox) {
+            width: 26.8125rem;
+            height: 3.375rem;
+            padding: 15px 25px;
+            border: 0;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+          }
+          .check {
+            display: flex;
+            gap: 5px;
+            .checkbox {
+              cursor: pointer;
+            }
+          }
+
+          button {
+            height: 40px;
+            border: 0;
+            padding: 10px 0;
+            border-radius: 4px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
